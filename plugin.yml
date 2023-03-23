@@ -18,9 +18,9 @@ commands:
 
  pc:
 
-  description: just another useless plugin
+  description: "chat[on,off]||add [playername] || remove [playername] || list || help"
 
-  usage: "/pc help"
+  usage: "§a/pc help"
 
   permission: PrivateChat.command.pc
 
