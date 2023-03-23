@@ -70,35 +70,31 @@ class PC extends PluginBase implements Listener {
 
                     break;
 
+                
                 case "add":
-
                     if (!isset($args[1])) {
-
                         return false;
-
                     }
-
+                    $senderName = strtolower($sender->getName());
                     $playerToAdd = strtolower($args[1]);
-
                     if (!isset($this->privateChatMembers[$sender->getName()])) {
-
                         $this->privateChatMembers[$sender->getName()] = [];
-
                     }
-
-                    if (!in_array($playerToAdd, $this->privateChatMembers[$sender->getName()])) {
-
-                        $this->privateChatMembers[$sender->getName()][] = $playerToAdd;
-
-                        $sender->sendMessage("§d[PrivateChat] §aAdded $playerToAdd to your private chat group.");
-
-                    } else {
-
-                        $sender->sendMessage("§d[PrivateChat] §c$playerToAdd is already in your private chat group.");
-
+                    if ($playerToAdd === $senderName) {
+                        $sender->sendMessage("§d[PrivateChat] §cYou cannot add yourself to your private chat group.");
+                        return true;
                     }
-
-                    break;
+                        if (Server::getInstance()->getPlayerExact($playerToAdd) !== null) {
+                            if (!in_array($playerToAdd, $this->privateChatMembers[$sender->getName()])) {
+                                $this->privateChatMembers[$sender->getName()][] = $playerToAdd;
+                                $sender->sendMessage("§d[PrivateChat] §aAdded $playerToAdd to your private chat group.");
+                            } else {
+                                $sender->sendMessage("§d[PrivateChat] §c$playerToAdd is already in your private chat group.");
+                            }
+                        } else {
+                            $sender->sendMessage("§d[PrivateChat] §c$playerToAdd is not currently online.");
+                        }
+                        break;
 
                 case "remove":
 
