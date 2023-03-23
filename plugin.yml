@@ -1,35 +1,18 @@
 ---
-
 name: PrivateChat
-
 version: 0.0.2
-
 main: AmitxD\PrivateChat\PC
-
 src-namespace-prefix: AmitxD\PrivateChat
-
 api: 4.12.8
-
 author: AmitxD
-
 website: https://github.com/Amitminer888/PrivateChat
-
 commands:
-
  pc:
-
   description: "chat[on,off]||add [playername] || remove [playername] || list || help"
-
   usage: "§a/pc help"
-
   permission: PrivateChat.command.pc
-
 permissions:
-
   PrivateChat.command.pc:
-
     description: "Allows the user to run the PrivateChat command"
-
     default: true
-
 ...
