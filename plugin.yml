@@ -1,18 +1,52 @@
 ---
 name: PrivateChat
-version: 0.0.2
-main: AmitxD\PrivateChat\PC
+version: 1.0.0
+main: AmitxD\PrivateChat\PrivateChat
 src-namespace-prefix: AmitxD\PrivateChat
 api: 4.12.8
 author: AmitxD
 website: https://github.com/Amitminer888/PrivateChat
+description: A plugin for private chatting with selected players
 commands:
- pc:
-  description: "chat[on,off]||add [playername] || remove [playername] || list || help"
-  usage: "§a/pc help"
-  permission: PrivateChat.command.pc
+  pc:
+    description: Main command for the PrivateChat plugin
+    usage: /pc <add|remove|list|chat>
+    permission: privatechat.command.pc
+    aliases: [privatechat, pchat]
+    subcommands:
+      add:
+        description: Add a player to your private chat group
+        usage: /pc add <player>
+        permission: privatechat.command.pc.add
+      remove:
+        description: Remove a player from your private chat group
+        usage: /pc remove <player>
+        permission: privatechat.command.pc.remove
+      list:
+        description: List the players in your private chat group
+        usage: /pc list
+        permission: privatechat.command.pc.list
+      chat:
+        description: Enable or disable private chat mode
+        usage: /pc chat <on|off>
+        permission: privatechat.command.pc.chat
 permissions:
-  PrivateChat.command.pc:
-    description: "Allows the user to run the PrivateChat command"
+  privatechat.*:
+    description: Gives access to all PrivateChat plugin commands and features
+    default: op
+  privatechat.command.pc:
+    description: Gives access to the main /pc command
+    default: true
+  privatechat.command.pc.add:
+    description: Allows players to add others to their private chat group
+    default: true
+  privatechat.command.pc.remove:
+    description: Allows players to remove others from their private chat group
+    default: true
+  privatechat.command.pc.list:
+    description: Allows players to list the members of their private chat group
+    default: true
+  privatechat.command.pc.chat:
+    description: Allows players to enable or disable private chat mode
     default: true
 ...
