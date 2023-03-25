@@ -24,7 +24,7 @@ Players can use the following commands to manage their private chat group:
 # **Configuration [TODO
 
 ## Found a bug?
-feel free to open the issues [here](https://github.com/Amitminer888/Feedback/issues/new)
+feel free to open the issues [here](https://github.com/Amitminer888/PrivateChat/issues/new)
 
 For contact me= discord username=```AmitxD#6115```
 
