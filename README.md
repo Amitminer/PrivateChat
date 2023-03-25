@@ -21,7 +21,13 @@ Players can use the following commands to manage their private chat group:
 + ```/pc list``` - List the members of your private chat group.<br>
 + ```/pc chat on``` - Turn on private chat mode.<br>
 + ```/pc chat off``` - Turn off private chat mode.<br>
-# **Configuration [TODO]
+# **Configuration [TODO
+
+## Found a bug?
+feel free to open the issues [here](https://github.com/Amitminer888/Feedback/issues/new)
+
+For contact me= discord username=```AmitxD#6115```
 
 ## Issues and Contributions
 If you encounter any issues while using the plugin, please submit an issue on the GitHub repository. If you would like to contribute to the plugin, you can fork the repository and submit a pull request.
+
